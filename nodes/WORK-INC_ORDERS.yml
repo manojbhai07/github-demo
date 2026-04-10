@@ -1,0 +1,192 @@
+fileVersion: 1
+id: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+name: INC_ORDERS
+operation:
+  config:
+    ddqcolumns:
+      items:
+        - {}
+    dqdup: false
+    dqhandle: false
+    dqnull: false
+    incColumn:
+      columnCounter: d6d77f3b-4181-4522-83f8-0bb48d1bf88e
+      stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+    ndqcolumns:
+      items:
+        - {}
+    persistTableLocation: TARGET
+    persistTableName: FCT_ORDERS
+    postSQL: ""
+    preSQL: ""
+    refTable: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6d77f3b-4181-4522-83f8-0bb48d1bf88e
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 217e93a8-dcb9-4786-bc3a-d41a1635bf2c
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1e97b4c-1d72-4580-aa25-eddad24c4643
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a81bc050-dd9a-4014-a7db-70929b123329
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 384adfa1-0631-4c11-9d1e-d2829b3e0f64
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 91073861-3474-4c1b-99dd-c3e0dcd9ec73
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 585ce87a-58fd-494a-afae-82d579080ce3
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 899b1b67-bbea-4874-841e-359cf56755a3
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b18d0e61-b128-4642-9e1d-83a11414f09f
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: NUMBER(12,2)
+        description: ""
+        name: TOTAL_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 51013e94-b786-487b-85a7-35fb27421cd8
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 530630ec-2e9b-44ca-8627-ba8be2342a9a
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: NUMBER(5,2)
+        description: ""
+        name: DISCOUNT_PERCENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3c1e9e6-44b5-4562-b395-577a41f0f186
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6967a47-be70-4784-85f3-f93d1219e254
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: VARCHAR(200)
+        description: ""
+        name: SHIPPING_ADDRESS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efd3ad2f-0984-413d-aaba-ab2ecfa16c3b
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: afd20353-568a-4c01-85ba-5645f9e77504
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: VARCHAR(30)
+        description: ""
+        name: PAYMENT_METHOD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 82b82292-48ca-48a3-9fee-a6a7e54fc335
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36770975-cddc-4dc8-882b-96ef25bb20f0
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: SHIPPED_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: af44f682-3017-4ce9-91af-9f8378ca179a
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 092f49b0-0e2c-482c-9ef2-434c410f6359
+          stepCounter: 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: DELIVERY_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 41d5a493-6e8e-4655-83fc-ae3a84a06524
+                stepCounter: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ORDERS: 9b821a2c-b754-4149-bde2-cad796c9bbe7
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DS_SOURCE
+            nodeName: ORDERS
+        join:
+          joinCondition: FROM {{ ref('DS_SOURCE', 'ORDERS') }} "ORDERS"
+        name: INC_ORDERS
+        noLinkRefs: []
+  name: INC_ORDERS
+  overrideSQL: false
+  schema: ""
+  sqlType: incremental:::230
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,8 @@
+fileVersion: 1
+id: 0ad80555-8373-42a0-a2f3-3f22d32ff5c1
+name: INCREMENTAL
+steps:
+  - 0a226d15-2a6a-4d9c-970a-da3815bd5c7f
+  - 9b821a2c-b754-4149-bde2-cad796c9bbe7
+  - d9a228ba-a45c-4298-a4ee-d40d7fe9610b
+type: Subgraph

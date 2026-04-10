@@ -1,0 +1,123 @@
+fileVersion: 1
+id: 5f0d5418-8258-4d09-a97c-925424d2f1ad
+name: HUB_CUSTOMER
+operation:
+  config:
+    disable_hwm: true
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: Customer data as defined by TPC-H
+  isMultisource: true
+  locationName: WORK
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03a90dd6-e05c-4779-a2bf-e892188cdbbb
+          stepCounter: 5f0d5418-8258-4d09-a97c-925424d2f1ad
+        config:
+          is_Hub_hk: true
+        dataType: STRING
+        description: ""
+        name: HK_CUSTOMERS_H
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e243852b-5466-4ae8-ab7d-6d67dfc629b2
+                stepCounter: e9fb628f-2087-462c-9d77-75f169f5defa
+            transform: ""
+          - columnReferences:
+              - columnCounter: 55051580-9250-4cae-be9e-375e9cd80b6c
+                stepCounter: c4b7c9f5-e1da-4b23-acba-fc25772498f2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 350157d2-9d81-4b6e-8830-116531f9a3eb
+          stepCounter: 5f0d5418-8258-4d09-a97c-925424d2f1ad
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_CUSTKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f40110bf-876e-4d58-841b-91a9c94e6e29
+                stepCounter: e9fb628f-2087-462c-9d77-75f169f5defa
+            transform: ""
+          - columnReferences:
+              - columnCounter: 93ed8bff-07ac-4298-abfd-65669674c300
+                stepCounter: c4b7c9f5-e1da-4b23-acba-fc25772498f2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bcc44340-b902-4fe5-a3d7-f9ce8a128028
+          stepCounter: 5f0d5418-8258-4d09-a97c-925424d2f1ad
+        config: {}
+        dataType: TIMESTAMP
+        description: The Load Date Timestamp (LDTS) describes when this data first arrived in the Data Warehouse.
+        name: LDTS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37218651-add4-43d0-a5cd-a5817cc8cff2
+                stepCounter: e9fb628f-2087-462c-9d77-75f169f5defa
+            transform: ""
+          - columnReferences:
+              - columnCounter: 5636c104-2e75-436d-94bc-1db0d347ec57
+                stepCounter: c4b7c9f5-e1da-4b23-acba-fc25772498f2
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f245900-6c87-45ee-a916-2d0318317a23
+          stepCounter: 5f0d5418-8258-4d09-a97c-925424d2f1ad
+        config: {}
+        dataType: STRING
+        description: The Record Source (RSRC) describes the source of this data.
+        name: RSRC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 920eea3c-884c-4664-877d-77a94d8bd117
+                stepCounter: e9fb628f-2087-462c-9d77-75f169f5defa
+            transform: ""
+          - columnReferences:
+              - columnCounter: f97e86a9-7e18-4cf2-b9b3-0d7d5c7fda33
+                stepCounter: c4b7c9f5-e1da-4b23-acba-fc25772498f2
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          DVSTG_CUSTOMER: e9fb628f-2087-462c-9d77-75f169f5defa
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: DVSTG_CUSTOMER
+        join:
+          joinCondition: FROM {{ ref('WORK', 'DVSTG_CUSTOMER') }} "DVSTG_CUSTOMER"
+        name: HUB_CUSTOMER
+        noLinkRefs: []
+      - aliases:
+          DVSTG_ORDERS: c4b7c9f5-e1da-4b23-acba-fc25772498f2
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: WORK
+            nodeName: DVSTG_ORDERS
+        join:
+          joinCondition: FROM {{ ref('WORK', 'DVSTG_ORDERS') }} "DVSTG_ORDERS"
+        name: DVSTG_ORDERS
+        noLinkRefs: []
+  name: HUB_CUSTOMER
+  overrideSQL: false
+  schema: ""
+  sqlType: datavault4coalesce:::6
+  type: sql
+  version: 1
+type: Node
